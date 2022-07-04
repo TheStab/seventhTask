@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Add Field</string>
+    <string name="enter_field_name">Enter Field Name</string>
+    <string name="add_field">Add Field</string>
 </resources>

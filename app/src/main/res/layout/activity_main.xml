@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,37 +9,47 @@
         android:id="@+id/parentLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:padding="20dp"
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/horizontalLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/fieldNameEditText"
                 android:layout_width="166dp"
                 android:layout_height="48dp"
+                android:layout_marginStart="5dp"
                 android:hint="@string/enter_field_name"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColorHint="#757575" />
 
-            <CheckBox
-                android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/addFieldButton"
+                android:background="@android:color/transparent"
+                android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="44dp"
                 android:text="@string/add_field"/>
 
+
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/field_is_numeric"
+            android:textColor="@color/orange"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         addField.setOnClickListener{
 
             createAndAddView(fieldName.text.toString(), checkBox.isChecked)
+
+            fieldName.text.clear()
         }
 
     }
@@ -32,18 +34,14 @@ class MainActivity : AppCompatActivity() {
     private fun createAndAddView(stringFieldName: String, check: Boolean) {
 
         val edit = EditText(this)
-
         val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                      LinearLayout.LayoutParams.WRAP_CONTENT)
 
         edit.layoutParams = params
-
-        if(check) {
-            edit.inputType = InputType.TYPE_CLASS_NUMBER
-        } else edit.inputType = InputType.TYPE_CLASS_TEXT
-
-        //if (stringFieldName.isNotEmpty())
-            edit.hint = stringFieldName
+        if(check) edit.inputType = InputType.TYPE_CLASS_NUMBER
+            else edit.inputType = InputType.TYPE_CLASS_TEXT
+        edit.hint = stringFieldName
+        edit.textSize = 20F
 
         linearLayout.addView(edit)
 
